@@ -59,30 +59,132 @@ body *, body *::before, body *::after{
 /* 로고 */
 .logo{
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 60px;
 }
 
 /* 멤베 링크 목록 */
 .member-service{
-  background: yellow;
   text-align: right;
+  padding: 4px 0;
+  transform: translateX(8px);
 }
 
 .member-service li{
   display: inline-block;
-  background: skyblue;
+}
+
+.member-service a{
+  display: inline-block;
+  padding: 4px 8px;
+  text-transform: uppercase;
 }
 
 
 /* 내비게이션 */
+.navigation{
+  padding-bottom: 50px;
+}
+
 .menu{
   background: orangered;
+  padding-left: 225px;
+  height: 47px;
+  border-top: 2px solid #000;
+}
+
+.menu-item{
+  float: left;
+  position: relative;
+}
+
+.menu-button{
+  border: 0;
+  padding: 0 23px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 45px;
+  border-left: 2px solid currentColor;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+.is-active .menu-button{
+  color: #ff0;
+}
+
+.is-active .menu-button::after{
+  content: "";
+  display: block;
+  border-top: 2px solid #000; 
+}
+
+.sub-menu{
+  position: absolute;
+  display: none;
+  white-space: nowrap;
+}
+
+.is-active .sub-menu{
+  display: block;
+}
+
+.sub-menu li{
+  display: inline-block;
+}
+
+.sub-menu a:hover, .sub-menu a:focus{
+  color: #f00;
+}
+
+.sub-menu a::before{
+  content: '\f192';
+  font-family: 'fontello';
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{
+  content: '\e800';
+}
 
-
+.menu-item:nth-child(-n+3) .sub-menu{
+  left: 0;
+}
+.menu-item:nth-child(n+4) .sub-menu{
+  right: 0;
+}
 
 /* 비주얼 */
 .visual{
