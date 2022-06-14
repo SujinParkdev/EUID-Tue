@@ -17,4 +17,65 @@ body{
   font-weight: 500;
 }
 
+body *, body *::before, body *::after{
+  box-sizing: border-box;
+}
 
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.header{
+  background: yellow;
+}
+
+/* 비주얼 */
+.visual{
+  background: pink;
+  height: 120px;
+}
+
+/* 메인 콘텐츠 */
+.main{
+  background: skyblue;
+  min-height: 400px;
+  display: flow-root;
+  padding: 30px 15px;
+}
+
+.group{
+  float: left;
+  margin: 0 15px;
+}
+
+.group1{
+  background: teal;
+  width: 250px;
+}
+
+.group2{
+  background: yellow;
+  width: 380px;
+}
+
+.group3{
+  background: red;
+  width: 190px;
+}
+
+/* 슬로건 */
+.slogan{
+  background: coral;
+}
+
+/* 푸터 */
+.footer{
+  background: silver;
+}
+
+.footer-inner{
+  background: lime;
+}
